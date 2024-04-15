@@ -9,11 +9,10 @@ const getTodayString = () => {
 };
 
 export const AppointmentForm = ({
-  contacts,
   title,
   setTitle,
-  contact,
-  setContact,
+  contacts,
+  setContacts,
   date,
   setDate,
   time,
@@ -50,11 +49,12 @@ export const AppointmentForm = ({
           onChange={(e)=> setTime(e.target.value)}
           />
       </label>
+      <button type='submit'>Submit</button>
       <label>
         <ContactPicker
-          contacts={contact}
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
+          contacts={contacts}
+          value={contacts}
+          onChange={(e) => setContacts(e.target.value)}
           />
       </label>
     </form>
